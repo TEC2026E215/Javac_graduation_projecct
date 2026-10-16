@@ -1,0 +1,86 @@
+body {
+    text-align: center;
+    background-color: rgba(224, 220, 220, 0.226);
+    margin: 0;
+}
+
+/*------------------ヘッダー-------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    height: 50px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 画像サイズは #icon のみに限定指定 */
+#icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.header-button {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+}
+
+.Btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 110px;
+    text-align: center;
+}
+
+.Btn:hover {
+    background-color: #0056b3;
+}
+
+#logoutBtn {
+    padding: 8px 16px;
+    background-color: #f14029;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 110px;
+    text-align: center;
+}
+
+/*------------------フォーム表示部分-------------------------*/
+#review_input {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+textarea {
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+    margin-top: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    resize: none; 
+}
