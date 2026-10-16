@@ -1,7 +1,11 @@
 const today = new Date();
-let currentYear = today.getFullYear();
-let currentMonth = today.getMonth() + 1;
+const startYear = today.getFullYear();
+const startMonth = today.getMonth() + 1;
 
+let currentYear = startYear;
+let currentMonth = startMonth;
+
+/*---------------------仮----------------------------------------------- */
 const mockData = {
     "2026/10": {
         1: 'ok', 2: 'ok', 3: 'ok', 4: 'ng', 5: 'ok', 
@@ -10,12 +14,9 @@ const mockData = {
         16: 'ok', 17: 'ok', 18: 'ok', 19: 'ok', 20: 'ok', 
         21: 'ok', 22: 'ok', 23: 'ok', 24: 'ok', 25: 'ok', 
         26: 'ok', 27: 'ok', 28: 'ok', 29: 'ok', 30: 'ok', 31: 'ok'
-    },
-    "2026/11": {
-        1: 'ng', 2: 'ok', 3: 'ok', 4: 'ok', 5: 'ok',
-        6: 'ok', 7: 'ng', 8: 'ok', 9: 'ok', 10: 'ok'
     }
 };
+/*---------------------仮----------------------------------------------- */
 
 function renderCalendar() {
     const monthYearEl = document.getElementById('monthYear');
@@ -68,15 +69,24 @@ function renderCalendar() {
 }
 
 function changeMonth(offset) {
-    currentMonth += offset;
-    if (currentMonth > 12) {
-        currentMonth = 1;
-        currentYear += 1;
-    } else if (currentMonth < 1) {
-        currentMonth = 12;
-        currentYear -= 1;
+    let targetYear = currentYear;
+    let targetMonth = currentMonth + offset;
+
+    if (targetMonth > 12) {
+        targetMonth = 1;
+        targetYear += 1;
+    } else if (targetMonth < 1) {
+        targetMonth = 12;
+        targetYear -= 1;
     }
-    renderCalendar();
+
+    const diffMonths = (targetYear - startYear) * 12 + (targetMonth - startMonth);
+
+    if (diffMonths >= 0 && diffMonths < 3) {
+        currentYear = targetYear;
+        currentMonth = targetMonth;
+        renderCalendar();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

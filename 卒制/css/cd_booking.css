@@ -20,7 +20,6 @@ header {
     gap: 10px;
 }
 
-/* 画像サイズは #icon のみに限定指定 */
 #icon {
     width: 50px;
     height: 50px;
