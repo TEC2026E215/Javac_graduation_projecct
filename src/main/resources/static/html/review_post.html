@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/review_post.css">
+    <title>学就―口コミ投稿</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-logo">
+            <img id="icon" src="../img/icon_kari.png" alt="学就">
+            <h1>学就</h1>
+        </div>
+        <div class="header-button">
+            <a href="main.html">
+                <button class ="Btn" id="homeBtn">ホーム</button>
+            </a>
+            <a href="cs_booking.html">
+                <button class ="Btn"id="checkBtn">CS予約</button>
+            </a>
+            <a href="review_post.html">
+                <button class ="Btn"id="postBtn">体験談投稿</button>
+            </a>
+            <a href="">
+                <button class ="Btn"id="postBtn">体験談一覧</button>
+            <a href="login.html">
+                <button id="logoutBtn">ログアウト</button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h1>就活面接体験談投稿</h1>
+
+        <form id="review_input">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="company">企業名</label>
+                    <input type="text" id="company" name="company" placeholder="企業名(正式名称)">
+                </div>
+
+                <div class="form-group">
+                    <label for="industry">業界</label>
+                    <select id="industry" name="industry">
+                        <option value="">選択してください</option>
+
+                        <optgroup label="メーカー（製造業）">
+                            <option value="automotive">自動車・輸送機器</option>
+                            <option value="electronics">電機・電子・半導体</option>
+                            <option value="chemical">化学・素材・繊維</option>
+                            <option value="food">食品・農林水産</option>
+                            <option value="machinery">機械・プラント</option>
+                        </optgroup>
+
+                        <optgroup label="IT・通信・マスコミ">
+                            <option value="it_software">IT・ソフトウェア・通信</option>
+                            <option value="web_game">Web・インターネット・ゲーム</option>
+                            <option value="media_ad">マスコミ・広告・出版</option>
+                        </optgroup>
+
+                        <optgroup label="商社・流通・小売">
+                            <option value="trading_company">総合商社・専門商社</option>
+                            <option value="retail_department">百貨店・スーパー・コンビニ</option>
+                            <option value="ec">専門店・EC・アパレル</option>
+                        </optgroup>
+
+                        <optgroup label="金融・不動産">
+                            <option value="bank_securities">銀行・証券</option>
+                            <option value="insurance">保険（生保・損保）</option>
+                            <option value="real_estate">不動産・建設・住宅</option>
+                        </optgroup>
+
+                        <optgroup label="サービス・インフラ">
+                            <option value="logistics">運輸・物流・倉庫</option>
+                            <option value="energy">電力・ガス・エネルギー</option>
+                            <option value="travel_hotel">旅行・観光・ホテル・外食</option>
+                            <option value="medical_welfare">医療・福祉・介護</option>
+                            <option value="education">教育・学校・塾</option>
+                            <option value="consulting">専門サービス・コンサルティング</option>
+                        </optgroup>
+
+                        <optgroup label="その他">
+                            <option value="government">公務員・団体</option>
+                            <option value="other_industry">その他</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phase">選考フェーズ</label>
+                    <select id="phase" name="phase">
+                        <option value="">選択してください</option>
+                        <option value="group_discuss">グループディスカッション</option>
+                        <option value="first_interview">1次面接</option>
+                        <option value="second_third_interview">2次面接・3次面接</option>
+                        <option value="final_interview">最終面接</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="place">形式</label>
+                    <select id="place" name="place">
+                        <option value="">選択してください</option>
+                        <option value="online">オンライン</option>
+                        <option value="office">対面</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="interview_detail">面接の雰囲気、所要時間</label>
+                <textarea id="interview_detail" name="interview_detail" rows="2" cols="40" placeholder="ここに入力してください"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="interview_content">面接の質問内容</label>
+                <textarea id="interview_content" name="interview_content" rows="2" cols="40" placeholder="ここに入力してください"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="advice">後輩へアドバイス</label>
+                <textarea id="advice" name="advice" rows="2" cols="40" placeholder="ここに入力してください"></textarea>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" id="submitBtn">就活面接体験談を投稿する</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>

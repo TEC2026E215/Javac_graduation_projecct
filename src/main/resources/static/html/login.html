@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <title>学就</title>
+</head>
+<header>
+    <img src="../img/icon_kari.png" alt="学就">
+    <h1>学就</h1>
+</header>
+<body>
+    <div id="inputArea">
+        <h2>ログイン</h2>
+        <form action="" method="get" class="form-example">
+            <div>
+                <label for="stuId">学籍番号: </label>
+                <input type="text" name="stuId" id="stuId" required />
+            </div>
+            <div>
+                <label for="stuPassword">パスワード: </label>
+                <input type="text" name="stuPassword" id="stuPassword" required />
+            </div>
+            <button id="loginBtn" type="button">ログイン</button>
+            <div>
+                <h2 id="err"></h2>
+            </div>
+        </form>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
