@@ -1,0 +1,105 @@
+body {
+    text-align: center;
+    background-color: rgba(224, 220, 220, 0.226);
+    margin: 0;
+}
+
+/*------------------ヘッダー-------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px; 
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    display: block;
+}
+
+header > div.header-button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.Btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 130px; 
+    text-align: center;
+}
+
+.Btn:hover {
+    background-color: #0056b3;
+}
+
+#logoutBtn {
+    padding: 8px 16px;
+    background-color: #f14029;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 110px;
+    text-align: center;
+}
+
+#logoutBtn:hover {
+    background-color: #d32f2f;
+}
+
+/*-----------------------ボディ--------------------------------*/
+#item {
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.box {
+    width: 280px;
+    padding: 20px 10px;
+    border: 0.5px solid #979797;
+    border-radius: 20px;
+    background-color: white;
+}
+
+#bookingCheck {
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border: 0.5px solid #979797; 
+    border-radius: 20px;
+}
+    
+.text {
+    font-weight: 500;
+}
+
+.err {
+    text-decoration: dashed;
+    color: red;
+}
