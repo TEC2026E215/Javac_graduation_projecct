@@ -30,14 +30,15 @@ public class ConnectDB {
      */
     public static void javaShowTables() {
         // usersテーブルから最新のデータを最大10件取得するSQL
-        String sql = "SELECT * FROM users LIMIT 10";
+        String sql = "SELECT * FROM reviews LIMIT 10";
+        //String sql = "SELECT table_name FROM information_schema.tables WHERE table_schema = 'gakusyu_db'";
         
         try (Connection conn = getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
              
             System.out.println("\n=================================");
-            System.out.println("📄 usersテーブルの中身（実際のデータ）");
+            System.out.println("📄 テーブルの中身（実際のデータ）");
             System.out.println("=================================");
             
             // 列の数（カラム数）や名前を取得する
