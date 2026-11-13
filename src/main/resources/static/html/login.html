@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="../css/login.css">
     <title>学就</title>
 </head>
-<body> <!-- headerをbody内に移動（HTMLの正しい構造のため） -->
-    <header>
-        <img src="../img/icon_kari.png" alt="学就">
-        <h1>学就</h1>
-    </header>
-
+<header>
+    <div class="header-logo">
+        <img id = "icon" src="../img/gakushu_icon.jpg" alt="学就">
+        <!--<h1>学就</h1>-->
+    </div>
+</header>
+<body>
     <div id="inputArea">
         <h2>ログイン</h2>
         <!-- 💡 修正ポイント①: actionを "/api/login" に、methodを "post" に変更 -->

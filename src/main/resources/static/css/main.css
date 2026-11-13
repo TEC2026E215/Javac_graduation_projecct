@@ -1,17 +1,18 @@
-body{
+body {
     text-align: center;
     background-color: rgba(224, 220, 220, 0.226);
     margin: 0;
 }
+
 /*------------------ヘッダー-------------------------*/
-img{
+img {
     width: 200px;
     height: 150px;
     object-fit: cover;
     cursor: pointer;
 }
 
-li{
+li {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -31,7 +32,7 @@ header {
     height: 50px;
 }
 
-#icon{
+#icon {
     width: 50px;
     height: 50px;
     display: block;
@@ -50,11 +51,10 @@ header {
 }
 
 header > div {
-    right: 20px;
     display: flex;
     flex-direction: row;
     gap: 6px;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .Btn {
@@ -70,7 +70,7 @@ header > div {
     text-align: center;
 }
 
-.Btn:hover{
+.Btn:hover {
     background-color: #0056b3;
 }
 
@@ -86,37 +86,62 @@ header > div {
     width: 110px;
     text-align: center;
 }
+
 /*-----------------------ボディ--------------------------------*/
-#item{
+#item {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 60px;
+    align-items: stretch;
+    gap: 40px;
     padding: 15px 20px;
-    margin: 80px 10px 10px 10px;
+    margin: 60px 10px 40px 10px;
 }
 
-.box{
-    height: 100px;
+.box {
+    min-height: 160px;
     width: 300px;
-    border: 0.5px solid #979797;
+    padding: 24px 16px;
+    box-sizing: border-box;
     border-radius: 20px;
-    background-color: white;
+    background-color: rgba(209, 207, 207, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
-#bookingCheck{
-    margin-left: 23.5%;
+.box i {
+    font-size: 100px;
+    color: #333;
+}
+
+.box h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.box a {
+    text-decoration: underline;
+    font-size: 15px;
+    color: inherit;
+}
+
+#bookingCheck {
+    margin: 0 auto;
     width: 450px;
     height: 250px;
     background-color: white;
     border-radius: 20px;
-}
-    
-.text{
-    font-weight:500;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.err{
+.text {
+    font-weight: 500;
+}
+
+.err {
     text-decoration: dashed;
     color: red;
 }
