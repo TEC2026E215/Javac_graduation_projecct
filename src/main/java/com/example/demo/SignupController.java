@@ -33,7 +33,7 @@ public class SignupController {
         String hashedPassword = passwordEncoder.encode(password);
 
         // 💡 2. RDSにインサートするSQL文
-        String sql = "INSERT INTO users (user_id, user_password, user_name, user_role) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO users (login_id, user_password, user_name, user_role) VALUES (?, ?, ?, ?)";
 
         // ConnectDBを使ってAWSのRDSへ接続・保存
         try (Connection conn = ConnectDB.getConnection();
