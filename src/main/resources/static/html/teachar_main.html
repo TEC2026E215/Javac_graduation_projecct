@@ -1,44 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/493a811a16.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/teachar.css">
-    <title>予約―実習室予約</title>
+    <title>学就メインー教員</title>
 </head>
-<header>
-    <div class="header-logo">
-        <img id = "icon" src="../img/gakushu_icon.jpg" alt="学就">
-        <!--<h1>学就</h1>-->
-    </div>
-    <div class="header-button">
-        <a href="main.html">
-            <button class ="Btn" id="homeBtn">ホーム</button>
-        </a>
-        <a href="">
-            <button class ="Btn"id="postBtn">体験談一覧</button>
-        </a>
-        <a href="reg_del.html">
-            <button class ="Btn"id="reg_delBtn">ユーザ登録・削除</button>
-        </a>
-        <a href="login.html">
-            <button id="logoutBtn">ログアウト</button>
-        </a>
-    </div>
-</header>
 <body>
-    <div id = "item" >
-            <section id = "postingCheck" class= "box">
-                <h2>体験談投稿一覧</h2>
-                <a href="">閲覧はこちら-></a>
-            </section>
-            <section id = "postingCheck" class= "box">
-                <h2>ユーザ登録・削除</h2>
-                <a href="">登録・削除はこちら-></a>
-            </section>
-            <section id = "bookingCheck">
-                <h2>キャリアセンター予約確認</h2>
-             </section>
+    <header>
+        <div class="header-logo">
+            <img id="icon" src="../img/gakushu_icon.jpg" alt="学就">
+            <h1 class="header-title">キャリア支援ポータル-教員</h1>
+        </div>
+        <div class="header-button">
+            <a href="teachar_main.html">
+                <button class="Btn" id="homeBtn">ホーム</button>
+            </a>
+            <a href="teachar_review_list.html">
+                <button class="Btn" id="postBtn">体験談一覧</button>
+            </a>
+            <a href="reg_del.html">
+                <button class="Btn" id="reg_delBtn">ユーザ登録・削除</button>
+            </a>
+            <a href="login.html">
+                <button id="logoutBtn">ログアウト</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- 上段：横並びにする2つのカード -->
+    <div id="item">
+        <section id="postingCheck" class="box">
+            <i class="fa-solid fa-list fa-3x"></i>
+            <h2>体験談投稿一覧</h2>
+            <a href="teachar_review_list.html">閲覧はこちら</a>
+        </section>
+        <section id="userManage" class="box">
+            <i class="fa-solid fa-user-minus fa-3x"></i>
+            <h2>ユーザ登録・削除</h2>
+            <a href="reg_del.html">登録・削除はこちら</a>
+        </section>
     </div>
+
+    <!-- 下段：キャリアセンター予約確認 -->
+    <section id="bookingCheck">
+        <i class="fa-solid fa-user-clock fa-2x"></i>
+        <h2>キャリアセンター予約確認</h2>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <p class="contact-tel">お問い合わせ先：<a href="tel:080-2180-0400">080-2180-0400</a></p>
+            <p class="contact-hours">受付時間：平日 9:00〜17:00</p>
+        </div>
+    </footer>
 </body>
 </html>
