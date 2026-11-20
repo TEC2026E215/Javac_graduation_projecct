@@ -96,43 +96,43 @@ public class DemoApplication {
         //     e.printStackTrace();
         // }
 
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        String hashedPassword = encoder.encode("password123");
+        // BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        // String hashedPassword = encoder.encode("password123");
 
-        String deleteSql = "DELETE FROM users WHERE login_id = ?";
-        String insertSql = "INSERT INTO users (login_id, user_password, user_name, user_role) VALUES (?, ?, ?, ?)";
+        // String deleteSql = "DELETE FROM users WHERE login_id = ?";
+        // String insertSql = "INSERT INTO users (login_id, user_password, user_name, user_role) VALUES (?, ?, ?, ?)";
 
-        try (Connection conn = ConnectDB.getConnection()) {
+        // try (Connection conn = ConnectDB.getConnection()) {
 
-            // 💡 1. 既存の testuser がいれば先に削除する
-            try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
-                deleteStmt.setString(1, "testuser");
-                int deleted = deleteStmt.executeUpdate();
-                if (deleted > 0) {
-                    System.out.println("🗑️ 古い testuser を削除しました。");
-                }
-            }
+        //     // 💡 1. 既存の testuser がいれば先に削除する
+        //     try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
+        //         deleteStmt.setString(1, "testuser");
+        //         int deleted = deleteStmt.executeUpdate();
+        //         if (deleted > 0) {
+        //             System.out.println("🗑️ 古い testuser を削除しました。");
+        //         }
+        //     }
 
-            // 💡 2. 新しく testuser を作成する
-            try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
-                insertStmt.setString(1, "testuser");       // 👤 ログインID
-                insertStmt.setString(2, hashedPassword);   // 🔑 ハッシュ化されたパスワード
-                insertStmt.setString(3, "テスト太郎");      // 📛 表示名
-                insertStmt.setString(4, "USER");           // 🎖️ 権限ロール
+        //     // 💡 2. 新しく testuser を作成する
+        //     try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+        //         insertStmt.setString(1, "testuser");       // 👤 ログインID
+        //         insertStmt.setString(2, hashedPassword);   // 🔑 ハッシュ化されたパスワード
+        //         insertStmt.setString(3, "テスト太郎");      // 📛 表示名
+        //         insertStmt.setString(4, "USER");           // 🎖️ 権限ロール
 
-                int rows = insertStmt.executeUpdate();
-                if (rows > 0) {
-                    System.out.println("\n=================================");
-                    System.out.println("🎉 テストユーザーの作成に成功しました！");
-                    System.out.println("ID: testuser / PW: password123");
-                    System.out.println("=================================\n");
-                }
-            }
+        //         int rows = insertStmt.executeUpdate();
+        //         if (rows > 0) {
+        //             System.out.println("\n=================================");
+        //             System.out.println("🎉 テストユーザーの作成に成功しました！");
+        //             System.out.println("ID: testuser / PW: password123");
+        //             System.out.println("=================================\n");
+        //         }
+        //     }
 
-        } catch (Exception e) {
-            System.out.println("\n⚠️ エラーが発生しました。");
-            e.printStackTrace();
-        }
+        // } catch (Exception e) {
+        //     System.out.println("\n⚠️ エラーが発生しました。");
+        //     e.printStackTrace();
+        // }
 
 
         SpringApplication.run(DemoApplication.class, args);
