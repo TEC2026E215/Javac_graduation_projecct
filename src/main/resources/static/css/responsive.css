@@ -1,0 +1,325 @@
+@media (max-width: 768px) {
+    /* 共通レイアウト・iOSズーム防止 */
+    body {
+        background-attachment: scroll;
+        overflow-x: hidden;
+        background-attachment: scroll;
+        overflow-x: clip;
+    }
+
+
+    input[type="text"],
+    input[type="password"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+    /* 共通ヘッダー */
+    header {
+        height: auto !important;
+        flex-direction: column;
+        padding: 12px 14px;
+        gap: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .header-logo {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #icon {
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .header-title {
+        font-size: 20px !important;
+        margin: 0;
+    }
+
+    .header-button,
+    header > div:not(.header-logo) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+    }
+
+ .header-button a,
+    header > div:not(.header-logo) a {
+        flex: 1 1 calc(33.33% - 6px);
+        max-width: 150px;
+        display: flex;
+        text-decoration: none;
+    }
+
+    .Btn,
+    #logoutBtn {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 8px 6px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    /* 共通フッター */
+    .site-footer {
+        padding: 16px 12px;
+        font-size: 13px;
+    }
+
+    /* ホーム画面（学生・教員共通） */
+    #item {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 0 16px;
+        margin: 24px 0;
+    }
+
+    .box {
+        width: 100% !important;
+        max-width: 420px;
+        min-height: 135px !important;
+        padding: 18px 16px;
+        gap: 8px;
+    }
+
+    .box i {
+        font-size: 52px !important;
+    }
+
+    .box h2 {
+        font-size: 18px;
+    }
+
+    #bookingCheck {
+        width: calc(100% - 32px) !important;
+        max-width: 480px;
+        margin: 0 auto 32px !important;
+        padding: 18px 14px !important;
+    }
+
+    #bookingCheck h2 {
+        font-size: 18px;
+    }
+
+    .booking-list {
+        padding: 0;
+    }
+
+    .booking-card {
+        padding: 10px 12px;
+    }
+
+    .booking-badge {
+        width: 80px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .booking-date {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    /* ログイン画面 */
+    #inputArea {
+        width: calc(100% - 32px) !important;
+        max-width: 420px;
+        margin: 20px auto;
+        padding: 20px 16px;
+        box-sizing: border-box;
+    }
+
+    #inputArea .form-example div {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: left;
+        margin-bottom: 14px;
+    }
+
+    #inputArea input {
+        height: 40px;
+        padding: 6px 10px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        margin-top: 4px;
+    }
+
+    #loginBtn {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .slideshow {
+        width: calc(100% - 32px) !important;
+        max-width: 500px;
+        height: 220px !important;
+    }
+
+    /* キャリアセンター予約画面 */
+    .date-picker {
+        padding: 12px;
+    }
+
+    .calendar-container {
+        padding: 12px;
+    }
+
+    .calendar-header {
+        gap: 16px;
+    }
+
+    .grid-item {
+        min-height: 52px;
+        padding: 4px 1px;
+    }
+
+    .status-icon {
+        font-size: 1.15rem;
+    }
+
+    /* 体験談投稿画面 */
+    main > h1 {
+        font-size: 22px;
+        margin: 20px 0 16px;
+    }
+
+    #review_input {
+        width: 100%;
+        max-width: 600px;
+        margin: 16px auto 32px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .form-row .form-group {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100% !important;
+        height: 130px;
+    }
+
+    #submitBtn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    /* 体験談一覧・検索画面 */
+    .review-container {
+        padding: 0 14px;
+        margin: 20px auto 36px;
+    }
+
+    .page-title {
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+
+    .search-card {
+        padding: 16px;
+    }
+
+    .search-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .search-actions {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .search-btn,
+    .reset-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .result-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .review-card {
+        padding: 16px;
+    }
+
+    .company-name {
+        font-size: 17px;
+    }
+
+    .company-sub {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    /* 詳細モーダル */
+    .modal-overlay {
+        padding: 12px;
+    }
+
+    .modal-content {
+        padding: 18px 16px;
+        max-height: 88vh;
+    }
+
+    .modal-header h3 {
+        font-size: 18px;
+    }
+
+    .modal-meta {
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px 12px;
+    }
+}
+
+html {
+    height: auto !important;
+    min-height: 100%;
+}
+
+body {
+    height: auto !important;
+    min-height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header a {
+    text-decoration: none;
+}

@@ -156,6 +156,25 @@ detailModal.addEventListener("click", (e) => {
     }
 });
 
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrollY > 200) {
+        scrollTopBtn.classList.add("show");
+    } else {
+        scrollTopBtn.classList.remove("show");
+    }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
 
 /*-----------------------以下サンプル--------------------------*/
 const sampleReviews = [

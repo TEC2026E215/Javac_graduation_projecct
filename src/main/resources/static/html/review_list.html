@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/review_list.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <script src="https://kit.fontawesome.com/493a811a16.js" crossorigin="anonymous"></script>
     <title>学就メインー学生</title>
 </head>
@@ -75,7 +76,8 @@
                         <option value="オンライン">オンライン</option>
                         <option value="対面">対面</option>
                     </select>
-                </div>      
+                </div>
+            </div>      
             <div class="search-actions">
                 <button type="button" class="reset-btn" id="resetBtn">条件をクリア</button>
                 <button type="button" class="search-btn" id="searchBtn"><i class="fas fa-search"></i> この条件で検索</button>
@@ -120,7 +122,7 @@
         </div>
     </div>
 
-    <script src="../js/review_list.js"></script>
+    
 
     <footer class="site-footer">
         <div class="footer-contact">
@@ -128,5 +130,12 @@
             <p class="contact-hours">受付時間：平日 9:00〜17:00</p>
         </div>
     </footer>
+
+    <button type="button" id="scrollTopBtn" class="scroll-top-btn" aria-label="TOPへ戻る">
+        <i class="fas fa-arrow-up"></i>
+        <span>TOP</span>
+    </button>
+    
+    <script src="../js/review_list.js"></script>
 </body>
 </html>
