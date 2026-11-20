@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja"> <!-- 言語を日本語に変更 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,21 +15,26 @@
 <body>
     <div id="inputArea">
         <h2>ログイン</h2>
-        <form action="" method="get" class="form-example">
+        <!-- 💡 修正ポイント①: actionを "/api/login" に、methodを "post" に変更 -->
+        <form action="/api/login" method="post" class="form-example">
             <div>
                 <label for="stuId">ID: </label>
-                <input type="text" name="stuId" id="stuId" required />
+                <!-- 💡 修正ポイント②: name属性を "username" に変更（Spring Securityのデフォルト） -->
+                <input type="text" name="username" id="stuId" required />
             </div>
             <div>
                 <label for="stuPassword">パスワード: </label>
-                <input type="text" name="stuPassword" id="stuPassword" required />
+                <!-- 💡 修正ポイント③: typeを "password" に（伏せ字）、nameを "password" に変更 -->
+                <input type="password" name="password" id="stuPassword" required />
             </div>
-            <button id="loginBtn" type="button">ログイン</button>
+            <!-- 💡 修正ポイント④: typeを "submit" に変更してフォーム送信ボタンにする -->
+            <button id="loginBtn" type="submit">ログイン</button>
             <div>
                 <h2 id="err"></h2>
             </div>
         </form>
     </div>
+    <!-- ※通常のフォーム送信にする場合、login.jsでの通信処理は不要になります -->
     <script src="../js/login.js"></script>
 </body>
 </html>
