@@ -18,7 +18,7 @@ public class LoginController {
 
     @PostMapping("/api/login")
     public Map<String, Object> login(
-            @RequestParam("username") String username,
+            @RequestParam("loginId") String loginId,
             @RequestParam("password") String password,
             HttpServletRequest request) { // セッション管理のためにrequestを追加
 
@@ -26,14 +26,14 @@ public class LoginController {
 
         // 💡 実行するSQL文 
         // （※テーブル名やカラム名[user_id, password]は、実際のDBの設計に合わせて後で修正してください）
-        String sql = "SELECT * FROM users WHERE user_id = ? AND password = ?";
+        String sql = "SELECT * FROM users WHERE login_id = ? AND password = ?";
 
         // ConnectDBを使ってAWSのRDSへ接続
         try (Connection conn = ConnectDB.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             // SQLの「?」の部分に画面から送られてきたIDとPWを当てはめる
-            pstmt.setString(1, username);
+            pstmt.setString(1, loginId);
             pstmt.setString(2, password);
 
             // SQLを実行
@@ -45,7 +45,7 @@ public class LoginController {
 
                     // 🔑 セッションを作成してログイン状態を記録する
                     HttpSession session = request.getSession(true);
-                    session.setAttribute("loginUser", username);
+                    session.setAttribute("loginUser", loginId);
 
                 } else {
                     // ❌ ユーザーが見つからなかった場合（ログイン失敗）
