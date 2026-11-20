@@ -16,7 +16,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // 💡 実行するSQL文
-        String sql = "SELECT user_id, user_password, user_role FROM users WHERE user_id = ?";
+        String sql = "SELECT login_id, user_password, user_role FROM users WHERE login_id = ?";
 
         try (Connection conn = ConnectDB.getConnection();
             PreparedStatement pstmt = conn.prepareStatement(sql)) {
@@ -26,7 +26,7 @@ public class CustomUserDetailsService implements UserDetailsService {
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
                     // DBから取得した情報
-                    String dbUser = rs.getString("user_id");
+                    String dbUser = rs.getString("login_id");
                     String dbPassword = rs.getString("user_password");
                     String dbRole = rs.getString("user_role");
 

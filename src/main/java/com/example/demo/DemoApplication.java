@@ -64,6 +64,77 @@ public class DemoApplication {
         //     e.printStackTrace();
         // }
 
+        // // 1. 既存のテーブルを削除するSQL
+        // String dropSql = "DROP TABLE IF EXISTS reviews;";
+
+        // // 2. テーブルを作成するSQL
+        // String createSql = "CREATE TABLE reviews (" +
+        //     "review_id INT AUTO_INCREMENT PRIMARY KEY, " +
+        //     "user_id INT NOT NULL, " +
+        //     "company_id INT NOT NULL, " +
+        //     "selection_phase VARCHAR(50) NOT NULL COMMENT '選考フェーズ', " +
+        //     "interview_format VARCHAR(50) NOT NULL COMMENT '形式', " +
+        //     "atmosphere_duration TEXT COMMENT '面接の雰囲気、所要時間', " +
+        //     "interview_questions TEXT COMMENT '面接の質問内容', " +
+        //     "advice_for_juniors TEXT COMMENT '後輩へアドバイス', " +
+        //     "created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
+        //     ")";
+
+        // try (Connection conn = ConnectDB.getConnection();
+        //     Statement stmt = conn.createStatement()) {
+
+        //     // 1. 削除を実行
+        //     stmt.executeUpdate(dropSql);
+        //     System.out.println("🗑️ 既存の reviews テーブルを削除しました。");
+
+        //     // 2. 作成を実行
+        //     stmt.executeUpdate(createSql);
+        //     System.out.println("🎉 reviews テーブルの作成に成功しました！");
+
+        // } catch (Exception e) {
+        //     System.out.println("⚠️ テーブル作成時にエラーが発生しました。");
+        //     e.printStackTrace();
+        // }
+
+        // BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        // String hashedPassword = encoder.encode("password123");
+
+        // String deleteSql = "DELETE FROM users WHERE login_id = ?";
+        // String insertSql = "INSERT INTO users (login_id, user_password, user_name, user_role) VALUES (?, ?, ?, ?)";
+
+        // try (Connection conn = ConnectDB.getConnection()) {
+
+        //     // 💡 1. 既存の testuser がいれば先に削除する
+        //     try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
+        //         deleteStmt.setString(1, "testuser");
+        //         int deleted = deleteStmt.executeUpdate();
+        //         if (deleted > 0) {
+        //             System.out.println("🗑️ 古い testuser を削除しました。");
+        //         }
+        //     }
+
+        //     // 💡 2. 新しく testuser を作成する
+        //     try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+        //         insertStmt.setString(1, "testuser");       // 👤 ログインID
+        //         insertStmt.setString(2, hashedPassword);   // 🔑 ハッシュ化されたパスワード
+        //         insertStmt.setString(3, "テスト太郎");      // 📛 表示名
+        //         insertStmt.setString(4, "USER");           // 🎖️ 権限ロール
+
+        //         int rows = insertStmt.executeUpdate();
+        //         if (rows > 0) {
+        //             System.out.println("\n=================================");
+        //             System.out.println("🎉 テストユーザーの作成に成功しました！");
+        //             System.out.println("ID: testuser / PW: password123");
+        //             System.out.println("=================================\n");
+        //         }
+        //     }
+
+        // } catch (Exception e) {
+        //     System.out.println("\n⚠️ エラーが発生しました。");
+        //     e.printStackTrace();
+        // }
+
+
         SpringApplication.run(DemoApplication.class, args);
 
 		ConnectDB.javaShowTables();
