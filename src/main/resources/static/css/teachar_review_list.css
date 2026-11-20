@@ -1,0 +1,150 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    display: flex;          
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(224, 220, 220, 0.226);
+    margin: 0;
+    text-align: center;
+    background-color: rgba(224, 220, 220, 0.226);
+    /*background-image: url("../img/.jpg");*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*------------------ヘッダー-------------------------*/
+img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    height: 50px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+#icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#hello {
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+header > div {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+}
+
+.Btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: auto;
+    min-width: 110px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.Btn:hover {
+    background-color: #0056b3;
+}
+
+#logoutBtn {
+    padding: 8px 16px;
+    background-color: #f14029;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    width: 110px;
+    text-align: center;
+}
+
+/*-----------------------ボディ--------------------------------*/
+
+
+/**------------フッター-----------*/
+.site-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e4e8;
+    color: #444444;
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-contact p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-tel {
+    font-weight: bold;
+    color: #222222;
+}
+
+.contact-tel a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-tel a:hover {
+    text-decoration: underline;
+}
+
+.contact-hours {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 4px;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/review_list.css">
+    <script src="https://kit.fontawesome.com/493a811a16.js" crossorigin="anonymous"></script>
+    <title>学就メインー学生</title>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img id="icon" src="../img/simple_rogo.jpg" alt="学就">
+            <h1 class="header-title">学就</h1>
+        </div>
+        <div class="header-button">
+            <a href="main.html"><button class ="Btn" id="homeBtn">ホーム</button></a>
+            <a href="cs_booking.html"><button class ="Btn"id="checkBtn">CS予約</button></a>
+            <a href="review_post.html"><button class ="Btn"id="postBtn">体験談投稿</button></a>
+            <a href="review_list.html"><button class ="Btn"id="postBtn">体験談一覧</button></a>
+            <a href="login.html"><button id="logoutBtn">ログアウト</button></a>
+        </div>
+    </header>
+
+<main class="review-container">
+        <h1 class="page-title">就活面接体験談一覧・検索</h1>
+
+        <section class="search-card">
+            <div class="search-grid">
+                <div class="form-group">
+                    <label for="searchKeyword">企業名・キーワード</label>
+                    <input type="text" id="searchKeyword" placeholder="企業名、質問内容、アドバイスなど">
+                </div>
+                <div class="form-group">
+                    <label for="searchIndustry">業界</label>
+                    <select id="searchIndustry">
+                        <option value="">すべて</option>
+                        <option value="IT・通信">IT・通信</option>
+                        <option value="メーカー">メーカー</option>
+                        <option value="商社">商社</option>
+                        <option value="金融">金融</option>
+                        <option value="サービス・インフラ">サービス・インフラ</option>
+                        <option value="マスコミ・広告">マスコミ・広告</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="searchLocation">企業の所在地</label>
+                    <input type="text" id="searchLocation" placeholder="例：東京都、大阪府">
+                </div>
+                <div class="form-group">
+                    <label for="searchSalary">初任給（下限）</label>
+                    <select id="searchSalary">
+                        <option value="0">指定なし</option>
+                        <option value="200000">20万円以上</option>
+                        <option value="230000">23万円以上</option>
+                        <option value="250000">25万円以上</option>
+                        <option value="280000">28万円以上</option>
+                        <option value="300000">30万円以上</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="searchPhase">選考フェーズ</label>
+                    <select id="searchPhase">
+                        <option value="">すべて</option>
+                        <option value="グループディスカッション">グループディスカッション</option>
+                        <option value="1次面接">1次面接</option>
+                        <option value="2次面接・3次面接">2次面接・3次面接</option>
+                        <option value="最終面接">最終面接</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="searchFormat">形式</label>
+                    <select id="searchFormat">
+                        <option value="">すべて</option>
+                        <option value="オンライン">オンライン</option>
+                        <option value="対面">対面</option>
+                    </select>
+                </div>      
+            <div class="search-actions">
+                <button type="button" class="reset-btn" id="resetBtn">条件をクリア</button>
+                <button type="button" class="search-btn" id="searchBtn"><i class="fas fa-search"></i> この条件で検索</button>
+            </div>
+        </section>
+
+        <div class="result-bar hidden" id="resultBar">
+            <p class="result-count">検索結果：<span id="resultCount">0</span>件</p>
+            <div class="sort-box">
+                <label for="sortSelect">並び替え：</label>
+                <select id="sortSelect">
+                    <option value="newest">新着順</option>
+                    <option value="salaryDesc">初任給が高い順</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="review-list hidden" id="reviewList"></section>
+    </main>
+
+    <div class="modal-overlay" id="detailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalCompany">企業名</h3>
+                <button type="button" class="close-modal" id="closeModalBtn">&times;</button>
+            </div>
+            <div class="modal-meta" id="modalMeta"></div>
+            <div class="modal-body">
+                <div class="detail-block">
+                    <h4>面接の雰囲気、所要時間</h4>
+                    <p id="modalAtmosphere"></p>
+                </div>
+                <div class="detail-block">
+                    <h4>面接の質問内容</h4>
+                    <p id="modalQuestions"></p>
+                </div>
+                <div class="detail-block">
+                    <h4>後輩へアドバイス</h4>
+                    <p id="modalAdvice"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/review_list.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <p class="contact-tel">お問い合わせ先：<a href="tel:">080-2180-0400</a></p>
+            <p class="contact-hours">受付時間：平日 9:00〜17:00</p>
+        </div>
+    </footer>
+</body>
+</html>

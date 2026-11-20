@@ -1,6 +1,22 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
+    display: flex;          
+    flex-direction: column;
     text-align: center;
     background-color: rgba(224, 220, 220, 0.226);
+    margin: 0;
+    text-align: center;
+    background-color: rgba(224, 220, 220, 0.226);
+    /*background-image: url("../img/.jpg");*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -30,6 +46,7 @@ header {
     padding: 15px 20px;
     background-color: white;
     height: 50px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 #icon {
@@ -144,4 +161,105 @@ header > div {
 .err {
     text-decoration: dashed;
     color: red;
+}
+
+#bookingCheck {
+    height: auto !important;
+    min-height: 220px;
+    padding-bottom: 28px;
+}
+
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.booking-card {
+    display: flex;
+    align-items: center;
+    background-color: #eeeeee;
+    border-radius: 6px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333333;
+    transition: background-color 0.2s ease;
+}
+
+.booking-card:hover {
+    background-color: #e2e2e2;
+}
+
+.booking-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b9ad9;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    width: 96px;
+    height: 36px;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.booking-date {
+    margin-left: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #444444;
+}
+
+.booking-arrow {
+    margin-left: auto;
+    color: #666666;
+    font-size: 16px;
+}
+
+.booking-empty {
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+
+/**------------フッター-----------*/
+.site-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e4e8;
+    color: #444444;
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-contact p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-tel {
+    font-weight: bold;
+    color: #222222;
+}
+
+.contact-tel a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-tel a:hover {
+    text-decoration: underline;
+}
+
+.contact-hours {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 4px;
 }
